@@ -1,0 +1,18 @@
+{
+  "$schema": "https://maestro.goldsky.com/maestrorc/schema",
+  "agent": {
+    "model": "opus",
+    "effort": "high",
+    "timeout_minutes": 30,
+    "max_turns": 30
+  },
+  "sandbox": {
+    "snapshot_name": "erpc-go-pnpm",
+    "setup_commands": {
+      "post_clone": [
+        "go mod download",
+        "pnpm install --frozen-lockfile"
+      ]
+    }
+  }
+}
